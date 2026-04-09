@@ -213,27 +213,51 @@ export default function Home() {
             <footer className="bg-neutral-950 border-t border-neutral-800 py-12 sm:py-16 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
                     <div className="col-span-2 md:col-span-1">
-                        <Image src='/dc-logo.svg' width={100} height={100} className='h-10 sm:h-12 md:h-16 w-auto'
-                               alt='dc-logo'/>
+                        <Link href="/">
+                            <Image src='/dc-logo.svg' width={100} height={100} className='h-10 sm:h-12 md:h-16 w-auto'
+                                   alt='dc-logo'/>
+                        </Link>
                     </div>
-                    {[
-                        {title: 'Drive', links: ['Requirements']},
-                        {title: 'Support', links: ['Safety', 'Contact Us']},
-                        {
-                            title: 'Legal',
-                            links: ['Terms of Service', 'Privacy Policy', 'Background Checks']
-                        }
-                    ].map((col) => (
-                        <div key={col.title}>
-                            <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm mb-3 sm:mb-4">{col.title}</h4>
-                            <ul className="space-y-2 text-neutral-500 text-xs sm:text-sm">
-                                {col.links.map((link) => (
-                                    <li key={link}><a href="#" className="hover:text-white transition-colors">{link}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+
+                    <div>
+                        <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm mb-3 sm:mb-4">Drive</h4>
+                        <ul className="space-y-2 text-neutral-500 text-xs sm:text-sm">
+                            <li>
+                                <Link href="/requirements"
+                                      className="hover:text-white transition-colors">Requirements</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm mb-3 sm:mb-4">Support</h4>
+                        <ul className="space-y-2 text-neutral-500 text-xs sm:text-sm">
+                            <li>
+                                <Link href="/safety" className="hover:text-white transition-colors">Safety</Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm mb-3 sm:mb-4">Legal</h4>
+                        <ul className="space-y-2 text-neutral-500 text-xs sm:text-sm">
+                            <li>
+                                <Link href="/terms" className="hover:text-white transition-colors">Terms of
+                                    Service</Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy" className="hover:text-white transition-colors">Privacy
+                                    Policy</Link>
+                            </li>
+                            <li>
+                                <Link href="/background" className="hover:text-white transition-colors">Background
+                                    Checks</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div
                     className="max-w-7xl mx-auto mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-neutral-800 text-center text-neutral-600 text-xs sm:text-sm">
