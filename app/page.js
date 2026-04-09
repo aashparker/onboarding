@@ -9,10 +9,10 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
                     <Image src='/dc-logo.svg' width={100} height={100} className='h-10 sm:h-12 md:h-16 w-auto'
                            alt='dc-logo'/>
-                    <button
+                    <Link href='/signin'
                         className="bg-white text-neutral-950 px-4 sm:px-5 py-3 text-xs sm:text-sm font-bold uppercase tracking-wide hover:bg-neutral-200 transition-colors rounded-sm">
                         Sign In
-                    </button>
+                    </Link>
                 </div>
             </nav>
 
