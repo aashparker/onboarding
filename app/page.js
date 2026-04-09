@@ -34,10 +34,10 @@ export default function Home() {
                                   className="bg-white text-neutral-950 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-black uppercase tracking-wide hover:bg-neutral-200 transition-all hover:scale-105 rounded-sm text-center">
                                 Apply Now
                             </Link>
-                            <button
+                            <Link href='/learn'
                                 className="border-2 border-neutral-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold uppercase tracking-wide hover:border-white hover:bg-white hover:text-neutral-950 transition-all rounded-sm">
                                 Learn More
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
