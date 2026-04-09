@@ -6,43 +6,44 @@ export default function Home() {
         <div className="min-h-screen bg-neutral-950 text-white font-sans selection:bg-white selection:text-neutral-950">
             {/* Navigation */}
             <nav className="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-sm border-b border-neutral-800">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                    <Image src='/dc-logo.svg' width={100} height={100} className='h-16 w-auto' alt='dc-logo'/>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+                    <Image src='/dc-logo.svg' width={100} height={100} className='h-10 sm:h-12 md:h-16 w-auto'
+                           alt='dc-logo'/>
                     <button
-                        className="bg-white text-neutral-950 px-6 py-2 text-sm font-bold uppercase tracking-wide hover:bg-neutral-200 transition-colors">
+                        className="bg-white text-neutral-950 px-4 sm:px-5 py-3 text-xs sm:text-sm font-bold uppercase tracking-wide hover:bg-neutral-200 transition-colors rounded-sm">
                         Sign In
                     </button>
                 </div>
             </nav>
 
             {/* Hero Section */}
-            <section className="pt-50 pb-30 px-6">
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-8">
-                        <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase">
+            <section className="pt-24 sm:pt-32 md:pt-40 lg:pt-50 pb-16 sm:pb-20 md:pb-30 px-4 sm:px-6">
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                    <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tighter uppercase">
                             Drive.<br/>
                             Earn.<br/>
                             Live Free.
                         </h1>
-                        <p className="text-xl text-neutral-400 max-w-md leading-relaxed">
+                        <p className="text-base sm:text-lg md:text-xl text-neutral-400 max-w-md mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
                             Join the platform that puts drivers first. Set your own schedule,
                             earn competitive rates, and get paid weekly.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                             <Link href='/me/apply'
-                                  className="bg-white text-neutral-950 px-8 py-4 text-lg font-black uppercase tracking-wide hover:bg-neutral-200 transition-all hover:scale-105">
+                                  className="bg-white text-neutral-950 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-black uppercase tracking-wide hover:bg-neutral-200 transition-all hover:scale-105 rounded-sm text-center">
                                 Apply Now
                             </Link>
                             <button
-                                className="border-2 border-neutral-700 text-white px-8 py-4 text-lg font-bold uppercase tracking-wide hover:border-white hover:bg-white hover:text-neutral-950 transition-all">
+                                className="border-2 border-neutral-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold uppercase tracking-wide hover:border-white hover:bg-white hover:text-neutral-950 transition-all rounded-sm">
                                 Learn More
                             </button>
                         </div>
                     </div>
 
                     {/* Custom Geometric Vehicle SVG */}
-                    <div className="relative hidden lg:block">
-                        <svg viewBox="0 0 400 300" className="w-full h-auto" fill="none"
+                    <div className="relative mt-8 lg:mt-0">
+                        <svg viewBox="0 0 400 300" className="w-full h-auto max-w-md mx-auto lg:max-w-none" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -70,19 +71,14 @@ export default function Home() {
                             <line x1="10" y1="140" x2="40" y2="140" stroke="white" strokeWidth="2" opacity="0.2"/>
                             <line x1="350" y1="130" x2="380" y2="130" stroke="white" strokeWidth="2" opacity="0.3"/>
                         </svg>
-
-                        <div
-                            className="absolute -bottom-4 -left-4 bg-white text-neutral-950 px-6 py-4 rounded-xl shadow-2xl">
-                            <div className="text-3xl font-black">R1,247</div>
-                            <div className="text-xs uppercase tracking-wider font-medium">Avg. Weekly</div>
-                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Stats Bar */}
             <section className="border-y border-neutral-200 bg-white">
-                <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div
+                    className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
                     {[
                         {value: '200+', label: 'Active Drivers'},
                         {value: 'R80', label: 'Avg. Hourly'},
@@ -90,20 +86,22 @@ export default function Home() {
                         {value: '24/7', label: 'Support'}
                     ].map((stat) => (
                         <div key={stat.label} className="text-center">
-                            <div className="text-4xl md:text-5xl font-black mb-2 text-neutral-950">{stat.value}</div>
-                            <div className="text-sm text-neutral-500 uppercase tracking-wider">{stat.label}</div>
+                            <div
+                                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-1 sm:mb-2 text-neutral-950">{stat.value}</div>
+                            <div
+                                className="text-xs sm:text-sm text-neutral-500 uppercase tracking-wider">{stat.label}</div>
                         </div>
                     ))}
                 </div>
             </section>
 
             {/* How It Works */}
-            <section className="py-24 px-6">
+            <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-16 text-center">
-                        Get Started in<br/>3 Steps
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-10 sm:mb-16 text-center">
+                        Get Started in<br className="hidden sm:block"/> 3 Steps
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                         {[
                             {
                                 step: 1,
@@ -122,13 +120,13 @@ export default function Home() {
                             }
                         ].map((item) => (
                             <div key={item.step}
-                                 className="group p-8 border border-neutral-800 rounded-2xl hover:border-white hover:bg-neutral-900 transition-all">
+                                 className="group p-6 sm:p-8 border border-neutral-800 rounded-xl sm:rounded-2xl hover:border-white hover:bg-neutral-900 transition-all">
                                 <div
-                                    className="w-16 h-16 bg-white text-neutral-950 rounded-full flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
+                                    className="w-12 h-12 sm:w-16 sm:h-16 bg-white text-neutral-950 rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
                                     {item.step}
                                 </div>
-                                <h3 className="text-2xl font-black uppercase mb-4">{item.title}</h3>
-                                <p className="text-neutral-400 leading-relaxed">{item.desc}</p>
+                                <h3 className="text-xl sm:text-2xl font-black uppercase mb-2 sm:mb-4">{item.title}</h3>
+                                <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -136,13 +134,13 @@ export default function Home() {
             </section>
 
             {/* Requirements */}
-            <section className="py-24 px-6 bg-neutral-900">
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-neutral-900">
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div>
-                        <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-6 sm:mb-8">
                             Driver<br/>Requirements
                         </h2>
-                        <div className="space-y-6">
+                        <div className="space-y-4 sm:space-y-6">
                             {[
                                 {
                                     title: 'Age & Experience',
@@ -161,20 +159,21 @@ export default function Home() {
                                     desc: 'Clean driving record and pass criminal background screening'
                                 }
                             ].map((req) => (
-                                <div key={req.title} className="flex items-start gap-4">
+                                <div key={req.title} className="flex items-start gap-3 sm:gap-4">
                                     <div
-                                        className="w-8 h-8 bg-white text-neutral-950 rounded-full flex items-center justify-center font-black text-sm shrink-0 mt-1">✓
+                                        className="w-6 h-6 sm:w-8 sm:h-8 bg-white text-neutral-950 rounded-full flex items-center justify-center font-black text-xs sm:text-sm shrink-0 mt-0.5 sm:mt-1">✓
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold mb-1">{req.title}</h4>
-                                        <p className="text-neutral-400">{req.desc}</p>
+                                        <h4 className="text-lg sm:text-xl font-bold mb-1">{req.title}</h4>
+                                        <p className="text-sm sm:text-base text-neutral-400">{req.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className="bg-neutral-950 p-8 rounded-3xl border border-neutral-800">
-                        <div className="space-y-4">
+                    <div
+                        className="bg-neutral-950 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-neutral-800 mt-6 lg:mt-0">
+                        <div className="space-y-3 sm:space-y-4">
                             {[
                                 {label: 'Vehicle Year', value: '2008 or newer'},
                                 {label: 'Doors Required', value: '4 doors minimum'},
@@ -183,9 +182,9 @@ export default function Home() {
                                 {label: 'Inspection', value: '19-point check'}
                             ].map((item, i, arr) => (
                                 <div key={item.label}
-                                     className={`flex justify-between items-center py-4 ${i !== arr.length - 1 ? 'border-b border-neutral-800' : ''}`}>
-                                    <span className="text-neutral-400">{item.label}</span>
-                                    <span className="font-bold">{item.value}</span>
+                                     className={`flex justify-between items-center py-3 sm:py-4 ${i !== arr.length - 1 ? 'border-b border-neutral-800' : ''}`}>
+                                    <span className="text-sm sm:text-base text-neutral-400">{item.label}</span>
+                                    <span className="text-sm sm:text-base font-bold">{item.value}</span>
                                 </div>
                             ))}
                         </div>
@@ -194,27 +193,28 @@ export default function Home() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 px-6 bg-white text-neutral-950">
+            <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-white text-neutral-950">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tighter mb-4 sm:mb-8">
                         Ready to Hit<br/>the Road?
                     </h2>
-                    <p className="text-xl text-neutral-600 mb-12 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg md:text-xl text-neutral-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
                         Join 3,000+ drivers already earning on our platform.
                         One-time registration fee of R250.
                     </p>
                     <Link href="/me/apply"
-                          className="bg-neutral-950 text-white px-10 py-5 text-lg font-black uppercase tracking-wide hover:bg-neutral-800 transition-all hover:scale-105">
+                          className="inline-block bg-neutral-950 text-white px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-black uppercase tracking-wide hover:bg-neutral-800 transition-all hover:scale-105 rounded-sm">
                         Apply Now — R250
                     </Link>
                 </div>
             </section>
 
             {/* Footer */}
-            <footer className="bg-neutral-950 border-t border-neutral-800 py-16 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-                    <div>
-                        <Image src='/dc-logo.svg' width={100} height={100} className='h-16 w-auto' alt='dc-logo'/>
+            <footer className="bg-neutral-950 border-t border-neutral-800 py-12 sm:py-16 px-4 sm:px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                    <div className="col-span-2 md:col-span-1">
+                        <Image src='/dc-logo.svg' width={100} height={100} className='h-10 sm:h-12 md:h-16 w-auto'
+                               alt='dc-logo'/>
                     </div>
                     {[
                         {title: 'Drive', links: ['Requirements']},
@@ -225,8 +225,8 @@ export default function Home() {
                         }
                     ].map((col) => (
                         <div key={col.title}>
-                            <h4 className="font-bold uppercase tracking-wider text-sm mb-4">{col.title}</h4>
-                            <ul className="space-y-2 text-neutral-500 text-sm">
+                            <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm mb-3 sm:mb-4">{col.title}</h4>
+                            <ul className="space-y-2 text-neutral-500 text-xs sm:text-sm">
                                 {col.links.map((link) => (
                                     <li key={link}><a href="#" className="hover:text-white transition-colors">{link}</a>
                                     </li>
@@ -236,7 +236,7 @@ export default function Home() {
                     ))}
                 </div>
                 <div
-                    className="max-w-7xl mx-auto mt-12 pt-8 border-t border-neutral-800 text-center text-neutral-600 text-sm">
+                    className="max-w-7xl mx-auto mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-neutral-800 text-center text-neutral-600 text-xs sm:text-sm">
                     © 2026 Drivers Cartel. All rights reserved.
                 </div>
             </footer>

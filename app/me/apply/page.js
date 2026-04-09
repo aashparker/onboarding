@@ -15,7 +15,7 @@ export default function Apply() {
 
     return (
         <div className="min-h-screen bg-neutral-950 text-white font-sans selection:bg-white selection:text-neutral-950">
-            <div className="pt-20 min-h-screen flex flex-col lg:flex-row lg:pt-0">
+            <div className="min-h-screen flex flex-col lg:flex-row lg:pt-0">
                 {/* Left Side - Progress & Info */}
                 <div
                     className="lg:w-2/5 bg-neutral-900 p-8 lg:p-12 flex flex-col justify-between border-r border-neutral-800">
