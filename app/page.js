@@ -30,7 +30,7 @@ export default function Home() {
                             earn competitive rates, and get paid weekly.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                            <Link href='/me/apply'
+                            <Link href='/apply'
                                   className="bg-white text-neutral-950 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-black uppercase tracking-wide hover:bg-neutral-200 transition-all hover:scale-105 rounded-sm text-center">
                                 Apply Now
                             </Link>
@@ -202,7 +202,7 @@ export default function Home() {
                         Join 3,000+ drivers already earning on our platform.
                         One-time registration fee of R250.
                     </p>
-                    <Link href="/me/apply"
+                    <Link href="/apply"
                           className="inline-block bg-neutral-950 text-white px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-black uppercase tracking-wide hover:bg-neutral-800 transition-all hover:scale-105 rounded-sm">
                         Apply Now — R250
                     </Link>
