@@ -199,7 +199,7 @@ export default function Home() {
                         Ready to Hit<br/>the Road?
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-neutral-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
-                        Join 3,000+ drivers already earning on our platform.
+                        Join 200+ drivers already earning on our platform.
                         One-time registration fee of R250.
                     </p>
                     <Link href="/apply"
