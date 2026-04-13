@@ -1,4 +1,3 @@
-// app/dashboard/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -67,7 +66,7 @@ export default function Dashboard() {
                                 <div className="flex items-center justify-between mb-6">
                                     <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tighter">Today's
                                         Trips</h2>
-                                    <Link href="/trips"
+                                    <Link href="/me/bookings"
                                           className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-400 hover:text-white transition-colors">
                                         View All →
                                     </Link>
@@ -232,29 +231,6 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Notifications */}
-                            {/*<div*/}
-                            {/*    className="bg-neutral-900 border border-neutral-800 rounded-xl sm:rounded-2xl p-4 sm:p-6">*/}
-                            {/*    <h3 className="text-lg sm:text-xl font-black uppercase tracking-tighter mb-4">Updates</h3>*/}
-                            {/*    <div className="space-y-3">*/}
-                            {/*        <div className="p-3 bg-neutral-950 border border-neutral-800 rounded-lg">*/}
-                            {/*            <div className="text-xs text-neutral-500 uppercase tracking-wider mb-1">New*/}
-                            {/*            </div>*/}
-                            {/*            <div className="text-sm font-bold mb-1">Surge Pricing Active</div>*/}
-                            {/*            <div className="text-xs text-neutral-400">Sandton area • 1.5x multiplier</div>*/}
-                            {/*        </div>*/}
-                            {/*        <div className="p-3 bg-neutral-950 border border-neutral-800 rounded-lg">*/}
-                            {/*            <div*/}
-                            {/*                className="text-xs text-neutral-500 uppercase tracking-wider mb-1">Yesterday*/}
-                            {/*            </div>*/}
-                            {/*            <div className="text-sm font-bold mb-1">Weekly Bonus Unlocked</div>*/}
-                            {/*            <div className="text-xs text-neutral-400">Complete 10 more trips for R500*/}
-                            {/*                bonus*/}
-                            {/*            </div>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>div*/}
                         </div>
                     </div>
                 </div>

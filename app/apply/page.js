@@ -295,7 +295,7 @@ export default function Apply() {
                                         Back
                                     </button>
                                     <button
-                                        className="flex-[2] bg-neutral-950 text-white py-5 text-lg font-black uppercase tracking-wide hover:bg-neutral-800 transition-all rounded-xl"
+                                        className="flex-2 bg-neutral-950 text-white py-5 text-lg font-black uppercase tracking-wide hover:bg-neutral-800 transition-all rounded-xl"
                                     >
                                         Pay R250 & Apply
                                     </button>
