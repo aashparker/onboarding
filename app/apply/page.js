@@ -1,7 +1,7 @@
 "use client"
 
 import {useState} from 'react';
-import {ArrowLeftIcon, CheckIcon, Upload} from "lucide-react";
+import {CheckIcon, Upload} from "lucide-react";
 
 export default function Apply() {
     const [step, setStep] = useState(1);
